@@ -1,12 +1,12 @@
 # Infrasity Deployment
 
-## Overview
+# Overview
 
 This repository contains the Terraform configuration script for deploying the Infrasity application on Azure Kubernetes Service (AKS) using Terraform and Azure resources. Terraform offers a robust infrastructure-as-code solution, while AKS provides a managed Kubernetes cluster, ensuring scalability and reliability. This README will guide you through the deployment process.
 
-## Prerequisites
+# Prerequisites
 
-Before you begin, make sure you have the following prerequisites:
+## Before you begin, make sure you have the following prerequisites:
 
 - [Terraform](https://www.terraform.io/downloads.html) installed.
 - Azure CLI and an Azure account.
@@ -14,7 +14,7 @@ Before you begin, make sure you have the following prerequisites:
 
 ## Deployment
 
-# Clone this repository to your local machine:
+## Clone this repository to your local machine:
 
 ```
 git clone https://github.com/ScaleupInfra/terrateam-azure.git
@@ -27,16 +27,16 @@ terraform init
 
 ```
 
-# Modify the main.tf file to configure your deployment according to your requirements. You may need to adjust variables, resources, and settings.
+## Modify the main.tf file to configure your deployment according to your requirements. You may need to adjust variables, resources, and settings.
 
-# Create a Terraform execution plan:
+## Create a Terraform execution plan:
 
 ```
 terraform plan
 
 ```
 
-Apply the Terraform configuration to create the AKS cluster and associated resources:
+## Apply the Terraform configuration to create the AKS cluster and associated resources:
 
 ```
 terraform apply
@@ -45,7 +45,7 @@ terraform apply
 
 After the deployment is complete, Terraform will output the kubeconfig information. Save this information securely, as it will be needed to interact with your AKS cluster.
 
-## Accessing the AKS Cluster
+# Accessing the AKS Cluster
 
 To access the AKS cluster using kubectl, use the kubeconfig provided during the Terraform apply step:
 
@@ -56,17 +56,17 @@ kubectl --kubeconfig=<path-to-kubeconfig> get pods
 
 Replace `<path-to-kubeconfig>` with the actual path to your kubeconfig file.
 
-## Cleanup
+# Cleanup
 
-# To destroy the AKS cluster and associated resources when you no longer need them, run:
+## To destroy the AKS cluster and associated resources when you no longer need them, run:
 
 ```
 terraform destroy
 
 ```
 
-## Troubleshooting
+# Troubleshooting
 
-# If you encounter any issues or have questions, please refer to the Terraform documentation and Azure Kubernetes Service documentation, or feel free to open an issue in this repository.
+## If you encounter any issues or have questions, please refer to the Terraform documentation and Azure Kubernetes Service documentation, or feel free to open an issue in this repository.
 
 Happy deploying!

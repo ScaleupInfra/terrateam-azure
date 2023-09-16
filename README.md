@@ -11,8 +11,9 @@ This repository contains the Terraform configuration script for deploying the In
 - [Terraform](https://www.terraform.io/downloads.html) installed.
 - Azure CLI and an Azure account.
 - Basic knowledge of Terraform and Kubernetes.
+- [Terrateam](https://github.com/apps/terrateam-action) installed.
 
-## Deployment
+## Deployment on local
 
 ## Clone this repository to your local machine:
 
@@ -27,7 +28,7 @@ terraform init
 
 ```
 
-## Modify the main.tf file to configure your deployment according to your requirements. You may need to adjust variables, resources, and settings.
+## Modify the main.tf file to configure your deployment according to your requirements. You may need to adjust your backend settings.
 
 ## Create a Terraform execution plan:
 
@@ -44,6 +45,35 @@ terraform apply
 ```
 
 After the deployment is complete, Terraform will output the kubeconfig information. Save this information securely, as it will be needed to interact with your AKS cluster.
+
+# Working with Terrateam on GitHub
+
+## Commit your changes into your github
+```
+git add .
+git commit -m "all files"
+git push origin main
+```
+You can change repo and it's branch according to your configurations.
+
+## Create a branch
+```
+git checkout -b terrateam-setups
+```
+Do some changes to your branch and push it to the GitHub
+```
+git add .
+git commit -m "changes made"
+git push origin terrateam-setups
+```
+## Raise a pull request
+You can raise a pull request from you GitHub UI or install [GitHub CLI](https://cli.github.com/) to your local and run the following command to raise a pull request
+```
+gh pr create --fill
+```
+
+# Checkout PR
+Checkout your PR request, on successful plan, run ``` terrateam apply ``` to apply changes in your Azure account.
 
 # Accessing the AKS Cluster
 

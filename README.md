@@ -73,7 +73,7 @@ gh pr create --fill
 ```
 
 # Checkout PR
-Checkout your PR request, on successful plan, run ``` terrateam apply ``` to apply changes in your Azure account.
+Checkout your PR request, on successful plan, comment ``` terrateam apply ``` on PR to apply changes in your Azure account.
 
 # Accessing the AKS Cluster
 
